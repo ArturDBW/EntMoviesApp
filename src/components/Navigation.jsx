@@ -54,7 +54,7 @@ export default function Navigation() {
       <div>
         <img
           className="nav__photo"
-          src="src/assets/image-avatar.png"
+          src="public/assets/image-avatar.png"
           alt="avatar"
         />
       </div>

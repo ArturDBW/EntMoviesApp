@@ -1,4 +1,4 @@
-import testImage from "../assets/thumbnails/undiscovered-cities/regular/medium.jpg";
+import testImage from "../../public/small.jpg";
 
 export default function Slider() {
   return (
