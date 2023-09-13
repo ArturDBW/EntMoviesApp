@@ -17,14 +17,16 @@ html {
 
 body {
   box-sizing: inherit;
-  background-color: var(--darkBlue); }
+  background-color: var(--darkBlue);
+  font-family: "Outfit", sans-serif; }
 
 .container {
   display: grid;
   grid-template-columns: min-content 1fr;
   grid-template-rows: repeat(3, min-content);
-  gap: 2rem;
-  padding: 2rem; }
+  gap: 0rem 3.6rem;
+  padding: 2rem;
+  color: var(--white); }
 
 .nav {
   background-color: var(--semiDarkBlue);
@@ -78,7 +80,8 @@ body {
     outline: none;
     border: none;
     font-size: 1.6rem;
-    margin-left: 2rem; }
+    margin-left: 2rem;
+    border-bottom: 1px solid transparent; }
     .header__input:hover {
       border-bottom: 1px solid var(--greyishBlue); }
 
@@ -86,5 +89,13 @@ body {
   grid-column: 2/3;
   grid-row: 2/3; }
 
-h1 {
-  color: #fff; }
+.sliderContainer__h2 {
+  font-size: 3.6rem;
+  font-weight: 300;
+  margin-bottom: 2rem; }
+
+.movieListContainer__h2 {
+  font-size: 3.6rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+  margin-top: 6rem; }

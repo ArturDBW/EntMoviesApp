@@ -19,14 +19,16 @@ html {
 body {
   box-sizing: inherit;
   background-color: var(--darkBlue);
+  font-family: "Outfit", sans-serif;
 }
 // Container ----------------------------------------------------------------->
 .container {
   display: grid;
   grid-template-columns: min-content 1fr;
   grid-template-rows: repeat(3, min-content);
-  gap: 2rem;
+  gap: 0rem 3.6rem;
   padding: 2rem;
+  color: var(--white);
   //   background-color: white;
 }
 
@@ -101,17 +103,35 @@ body {
     border: none;
     font-size: 1.6rem;
     margin-left: 2rem;
+    border-bottom: 1px solid transparent;
     &:hover {
       border-bottom: 1px solid var(--greyishBlue);
     }
   }
 }
 
-// main --------------------------------------------------------------->
+// main ----------------------------------------------------------------->
 .main {
   grid-column: 2/3;
   grid-row: 2/3;
 }
-h1 {
-  color: #fff;
+
+// Home ------------------------------------------------------------------>
+
+// Slider ---------------------------------------------------------------->
+.sliderContainer {
+  &__h2 {
+    font-size: 3.6rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+  }
+}
+// MovieList ------------------------------------------------------------->
+.movieListContainer {
+  &__h2 {
+    font-size: 3.6rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    margin-top: 6rem;
+  }
 }
