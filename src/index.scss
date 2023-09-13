@@ -84,23 +84,26 @@ body {
   grid-column: 2/3;
   grid-row: 1/2;
   padding: 2rem 0;
-  position: relative;
-
-  &__svg {
-    position: absolute;
-    content: "";
-    top: 2.6rem;
-    left: 0.5rem;
+  display: flex;
+  &__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid transparent;
   }
 
   &__input {
     color: var(--white);
-    padding: 1.6rem 4.6rem;
-    width: 40rem;
+    padding: 1.6rem 4.6rem 1.6rem 0rem;
+    width: 100%;
     background-color: transparent;
     outline: none;
     border: none;
     font-size: 1.6rem;
+    margin-left: 2rem;
+    &:hover {
+      border-bottom: 1px solid var(--greyishBlue);
+    }
   }
 }
 
