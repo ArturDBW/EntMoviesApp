@@ -3,14 +3,17 @@ import PropTypes from "prop-types";
 export default function MovieItem({ item }) {
   const { title, thumbnail, year, category, rating } = item;
   return (
-    <div className="movieListContainer">
-      <img src={thumbnail.regular.small} />
-      <p>
-        <span>{year}</span>
-        <span>{category}</span>
-        <span>{rating}</span>
+    <div className="movieListContainer__item">
+      <img
+        className="movieListContainer__item--img"
+        src={thumbnail.regular.small}
+      />
+      <p className="movieListContainer__item--p">
+        <span className="movieListContainer__item--year">{year}</span>
+        <span className="movieListContainer__item--category">{category}</span>
+        <span className="movieListContainer__item--rating">{rating}</span>
       </p>
-      <p>{title}</p>
+      <p className="movieListContainer__item--title">{title}</p>
     </div>
   );
 }

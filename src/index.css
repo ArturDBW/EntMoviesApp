@@ -3,7 +3,8 @@
   --darkBlue: #10141e;
   --greyishBlue: #5a698f;
   --semiDarkBlue: #161d2f;
-  --white: #fff; }
+  --white: #fff;
+  --grey: #a2a8b8; }
 
 *,
 *::before,
@@ -94,8 +95,27 @@ body {
   font-weight: 300;
   margin-bottom: 2rem; }
 
-.movieListContainer__h2 {
-  font-size: 3.6rem;
-  font-weight: 300;
-  margin-bottom: 2rem;
-  margin-top: 6rem; }
+.movieListContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-rows: auto;
+  gap: 4rem; }
+  .movieListContainer__item--img {
+    width: 100%;
+    border-radius: 1rem; }
+  .movieListContainer__item--p {
+    color: var(--grey);
+    font-size: 1.4rem;
+    margin-top: 0.5rem; }
+  .movieListContainer__item--category {
+    margin-left: 3rem; }
+  .movieListContainer__item--rating {
+    margin-left: 3rem; }
+  .movieListContainer__item--title {
+    font-size: 2.2rem;
+    margin-top: 0.5rem; }
+  .movieListContainer__h2 {
+    font-size: 3.6rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    margin-top: 3rem; }

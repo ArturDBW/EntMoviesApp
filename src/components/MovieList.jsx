@@ -8,10 +8,12 @@ export default function MovieList() {
   return (
     <>
       <h2 className="movieListContainer__h2">Recommended for you</h2>
-      {/* <img src="../public/large.jpg" alt="test" /> */}
-      {data.map((item, index) => (
-        <MovieItem item={item} key={index} />
-      ))}
+      <div className="movieListContainer">
+        {/* <img src="../public/large.jpg" alt="test" /> */}
+        {data.map((item, index) => (
+          <MovieItem item={item} key={index} />
+        ))}
+      </div>
     </>
   );
 }
