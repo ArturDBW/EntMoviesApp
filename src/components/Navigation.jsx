@@ -8,8 +8,6 @@ export default function Navigation() {
     setActiveIcon(iconId);
   };
 
-  // const isIconActive = (iconId) => activeIcon === iconId;
-
   return (
     <nav className="nav">
       <div>

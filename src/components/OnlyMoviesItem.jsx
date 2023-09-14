@@ -1,7 +1,7 @@
 import PropTypes from "prop-types";
 
 export default function OnlyMoviesItem({ item }) {
-  const { title, thumbnail, year, category, rating } = item;
+  const { title, thumbnail, year, category, rating, isBookmarked } = item;
 
   return (
     <div className="listContainer__item">
@@ -19,7 +19,7 @@ export default function OnlyMoviesItem({ item }) {
             d="m10.518.75.399 12.214-5.084-4.24-4.535 4.426L.75 1.036l9.768-.285Z"
             stroke="#FFF"
             strokeWidth="1.5"
-            fill="none"
+            fill={isBookmarked ? "#fff" : "none"}
           />
         </svg>
       </div>
