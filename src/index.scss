@@ -5,6 +5,7 @@
   --semiDarkBlue: #161d2f;
   --white: #fff;
   --grey: #a2a8b8;
+  --black: #000;
 }
 
 *,
@@ -27,7 +28,7 @@ body {
   display: grid;
   grid-template-columns: min-content 1fr;
   grid-template-rows: repeat(3, min-content);
-  gap: 0rem 3.6rem;
+  gap: 0rem 3rem;
   padding: 2rem;
   color: var(--white);
   //   background-color: white;
@@ -45,8 +46,7 @@ body {
   align-content: center;
   padding: 2rem;
   border-radius: 1rem;
-  //   height: calc(100vh - 4rem);
-  height: 100vh;
+  height: calc(100vh - 4rem);
   width: max-content;
 
   &__logo {
@@ -127,17 +127,42 @@ body {
     margin-bottom: 2rem;
   }
 }
-// MovieList ------------------------------------------------------------->
-.movieListContainer {
+
+// ----------------------------------------------------------> OnlyMovieList
+
+.movies__h2 {
+  font-size: 3.6rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+// -----------------------------------------------> Items
+
+.listContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-template-rows: auto;
   gap: 4rem;
 
+  &__h2 {
+    font-size: 3.6rem;
+    font-weight: 300;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+  }
+
   &__item {
+    position: relative;
     &--img {
       width: 100%;
       border-radius: 1rem;
+      transition: 0.3s all ease-in-out;
+
+      &:hover {
+        opacity: 0.5;
+        transition: 0.3s all ease-in-out;
+        cursor: pointer;
+      }
     }
     &--p {
       color: var(--grey);
@@ -145,9 +170,10 @@ body {
       margin-top: 0.5rem;
     }
     &--year {
+      margin-right: 3rem;
     }
     &--category {
-      margin-left: 3rem;
+      margin-left: 1rem;
     }
     &--rating {
       margin-left: 3rem;
@@ -156,11 +182,20 @@ body {
       font-size: 2.2rem;
       margin-top: 0.5rem;
     }
-  }
-  &__h2 {
-    font-size: 3.6rem;
-    font-weight: 300;
-    margin-bottom: 2rem;
-    margin-top: 3rem;
+    &--btnBookmarked {
+      position: absolute;
+      content: "";
+      top: 2rem;
+      right: 2rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 1rem 1.2rem;
+      border-radius: 50%;
+      transition: 0.2s all;
+      &:hover {
+        background-color: var(--white);
+        transition: 0.2s all;
+        cursor: pointer;
+      }
+    }
   }
 }

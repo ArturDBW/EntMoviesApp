@@ -4,7 +4,8 @@
   --greyishBlue: #5a698f;
   --semiDarkBlue: #161d2f;
   --white: #fff;
-  --grey: #a2a8b8; }
+  --grey: #a2a8b8;
+  --black: #000; }
 
 *,
 *::before,
@@ -25,7 +26,7 @@ body {
   display: grid;
   grid-template-columns: min-content 1fr;
   grid-template-rows: repeat(3, min-content);
-  gap: 0rem 3.6rem;
+  gap: 0rem 3rem;
   padding: 2rem;
   color: var(--white); }
 
@@ -39,7 +40,7 @@ body {
   align-content: center;
   padding: 2rem;
   border-radius: 1rem;
-  height: 100vh;
+  height: calc(100vh - 4rem);
   width: max-content; }
   .nav__logo {
     display: flex;
@@ -95,27 +96,54 @@ body {
   font-weight: 300;
   margin-bottom: 2rem; }
 
-.movieListContainer {
+.movies__h2 {
+  font-size: 3.6rem;
+  font-weight: 300;
+  margin-bottom: 2rem; }
+
+.listContainer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   grid-template-rows: auto;
   gap: 4rem; }
-  .movieListContainer__item--img {
-    width: 100%;
-    border-radius: 1rem; }
-  .movieListContainer__item--p {
-    color: var(--grey);
-    font-size: 1.4rem;
-    margin-top: 0.5rem; }
-  .movieListContainer__item--category {
-    margin-left: 3rem; }
-  .movieListContainer__item--rating {
-    margin-left: 3rem; }
-  .movieListContainer__item--title {
-    font-size: 2.2rem;
-    margin-top: 0.5rem; }
-  .movieListContainer__h2 {
+  .listContainer__h2 {
     font-size: 3.6rem;
     font-weight: 300;
     margin-bottom: 2rem;
     margin-top: 3rem; }
+  .listContainer__item {
+    position: relative; }
+    .listContainer__item--img {
+      width: 100%;
+      border-radius: 1rem;
+      transition: 0.3s all ease-in-out; }
+      .listContainer__item--img:hover {
+        opacity: 0.5;
+        transition: 0.3s all ease-in-out;
+        cursor: pointer; }
+    .listContainer__item--p {
+      color: var(--grey);
+      font-size: 1.4rem;
+      margin-top: 0.5rem; }
+    .listContainer__item--year {
+      margin-right: 3rem; }
+    .listContainer__item--category {
+      margin-left: 1rem; }
+    .listContainer__item--rating {
+      margin-left: 3rem; }
+    .listContainer__item--title {
+      font-size: 2.2rem;
+      margin-top: 0.5rem; }
+    .listContainer__item--btnBookmarked {
+      position: absolute;
+      content: "";
+      top: 2rem;
+      right: 2rem;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 1rem 1.2rem;
+      border-radius: 50%;
+      transition: 0.2s all; }
+      .listContainer__item--btnBookmarked:hover {
+        background-color: var(--white);
+        transition: 0.2s all;
+        cursor: pointer; }
