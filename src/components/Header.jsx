@@ -17,7 +17,7 @@ export default function Header() {
       <input
         className="header__input"
         type="text"
-        placeholder="Search for movies or TV series..."
+        placeholder="Search for movies or TV series"
       />
     </div>
   );
