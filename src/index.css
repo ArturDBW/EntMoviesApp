@@ -57,8 +57,6 @@ body {
     .nav__icons--svg:hover {
       fill: var(--red);
       transition: 0.2s all; }
-    .nav__icons--svg:active {
-      fill: var(--white); }
   .nav__photo {
     width: 6.5rem;
     border-radius: 10rem;
