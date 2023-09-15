@@ -101,7 +101,7 @@ body {
 
 .listContainer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   grid-template-rows: auto;
   gap: 4rem; }
   .listContainer__h2 {
@@ -141,6 +141,9 @@ body {
       border-radius: 50%;
       transition: 0.2s all; }
       .listContainer__item--btnBookmarked:hover {
-        background-color: var(--white);
+        background-color: rgba(0, 0, 0, 0.7);
         transition: 0.2s all;
         cursor: pointer; }
+
+.mt {
+  margin-top: 5rem; }

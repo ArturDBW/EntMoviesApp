@@ -7,7 +7,6 @@ export default function MovieList() {
     <>
       <h2 className="listContainer__h2">Recommended for you</h2>
       <div className="listContainer">
-        {/* <img src="../public/large.jpg" alt="test" /> */}
         {data.map((item, index) => (
           <MovieItem item={item} key={index} />
         ))}
