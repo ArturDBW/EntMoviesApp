@@ -138,6 +138,8 @@ body {
       right: 2rem;
       background-color: rgba(0, 0, 0, 0.5);
       padding: 1rem 1.2rem;
+      border: none;
+      outline: none;
       border-radius: 50%;
       transition: 0.2s all; }
       .listContainer__item--btnBookmarked:hover {

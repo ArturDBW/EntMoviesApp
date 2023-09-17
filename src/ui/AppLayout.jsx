@@ -1,14 +1,19 @@
 import { Outlet } from "react-router-dom";
 import Header from "../components/Header";
 import Navigation from "../components/Navigation";
+import { useState } from "react";
+import moviesListJSON from "../data.json";
 
-export default function AppLayout() {
+export function AppLayout() {
+  const [searchTitle, setSearchTitle] = useState("");
+  const [movies, setMovies] = useState(moviesListJSON);
+
   return (
     <div className="container">
       <Navigation />
-      <Header />
+      <Header searchTitle={searchTitle} setSearchTitle={setSearchTitle} />
       <main className="main">
-        <Outlet />
+        <Outlet context={{ movies, setMovies, searchTitle }} />
       </main>
     </div>
   );

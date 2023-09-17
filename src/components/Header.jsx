@@ -1,4 +1,6 @@
-export default function Header() {
+import PropTypes from "prop-types";
+
+export default function Header({ searchTitle, setSearchTitle }) {
   return (
     <div className="header">
       <div className="header__box">
@@ -15,6 +17,8 @@ export default function Header() {
         </svg>
       </div>
       <input
+        value={searchTitle}
+        onChange={(e) => setSearchTitle(e.target.value)}
         className="header__input"
         type="text"
         placeholder="Search for movies or TV series"
@@ -22,3 +26,8 @@ export default function Header() {
     </div>
   );
 }
+
+Header.propTypes = {
+  searchTitle: PropTypes.string,
+  setSearchTitle: PropTypes.func,
+};

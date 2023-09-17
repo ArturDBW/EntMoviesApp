@@ -1,7 +1,7 @@
 import Slider from "../components/Slider";
-import MovieList from "../components/MovieList";
+import { MovieList } from "../components/MovieList";
 
-export default function Home() {
+export function Home() {
   return (
     <>
       <Slider />

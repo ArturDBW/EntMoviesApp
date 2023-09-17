@@ -1,10 +1,12 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
-import AppLayout from "./ui/AppLayout";
-import Home from "./pages/Home";
+import { AppLayout } from "./ui/AppLayout";
+import { Home } from "./pages/Home";
 import Movies from "./pages/Movies";
 import TvSeries from "./pages/TvSeries";
 import Bookmarked from "./pages/Bookmarked";
 import Error from "./ui/Error";
+import json from "./data.json";
+import { MovieItem } from "./components/MovieItem";
 
 const router = createBrowserRouter([
   {
@@ -17,7 +19,16 @@ const router = createBrowserRouter([
       },
       {
         path: "/movies",
-        element: <Movies />,
+        children: [
+          {
+            path: "",
+            element: <Movies />,
+          },
+          {
+            path: ":id",
+            element: <MovieItem item={json[0]} />,
+          },
+        ],
       },
       {
         path: "/tvseries",

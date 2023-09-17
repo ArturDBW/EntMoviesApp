@@ -1,9 +1,23 @@
 import PropTypes from "prop-types";
+import { useOutletContext } from "react-router-dom";
 
-export default function MovieItem({ item }) {
-  const { title, thumbnail, year, category, rating, isBookmarked } = item;
+export function MovieItem({ item }) {
+  const { title, thumbnail, year, category, rating, isBookmarked, id } = item;
+  const { setMovies } = useOutletContext();
 
   const isMovie = category === "Movie";
+
+  const handleAddMovieToBookmarkedList = () =>
+    setMovies((prevMovies) =>
+      prevMovies.map((movie) =>
+        movie.id !== id
+          ? movie
+          : {
+              ...movie,
+              isBookmarked: !movie.isBookmarked,
+            }
+      )
+    );
 
   return (
     <div className="listContainer__item">
@@ -35,7 +49,10 @@ export default function MovieItem({ item }) {
         <span className="listContainer__item--rating">{rating}</span>
       </p>
       <p className="listContainer__item--title">{title}</p>
-      <div className="listContainer__item--btnBookmarked">
+      <button
+        onClick={handleAddMovieToBookmarkedList}
+        className="listContainer__item--btnBookmarked"
+      >
         <svg width="12" height="14" xmlns="http://www.w3.org/2000/svg">
           <path
             className="listContainer__item--svg"
@@ -45,13 +62,14 @@ export default function MovieItem({ item }) {
             fill={isBookmarked ? "#fff" : "none"}
           />
         </svg>
-      </div>
+      </button>
     </div>
   );
 }
 
 MovieItem.propTypes = {
   item: PropTypes.shape({
+    id: PropTypes.number,
     title: PropTypes.string,
     thumbnail: PropTypes.object,
     year: PropTypes.number,

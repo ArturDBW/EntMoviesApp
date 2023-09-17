@@ -1,20 +1,21 @@
-import data from "../data.json";
-import MovieItem from "./MovieItem";
-import PropTypes from "prop-types";
+import { useOutletContext } from "react-router-dom";
+import { MovieItem } from "./MovieItem";
 
-export default function MovieList() {
+export function MovieList() {
+  const { movies, searchTitle } = useOutletContext();
+
+  const filteredMovies = movies.filter((movie) =>
+    movie.title.toLocaleLowerCase().includes(searchTitle.toLocaleLowerCase())
+  );
+
   return (
     <>
       <h2 className="listContainer__h2">Recommended for you</h2>
       <div className="listContainer">
-        {data.map((item, index) => (
-          <MovieItem item={item} key={index} />
+        {filteredMovies.map((item) => (
+          <MovieItem item={item} key={item.id} />
         ))}
       </div>
     </>
   );
 }
-
-MovieList.propTypes = {
-  item: PropTypes.string,
-};
