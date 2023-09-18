@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function Navigation() {
+export function Navigation() {
   const [activeIcon, setActiveIcon] = useState(1);
 
   const handleIconClick = (iconId) => {

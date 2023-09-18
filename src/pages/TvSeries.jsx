@@ -1,7 +1,7 @@
+import { OnlyTvSeriesItem } from "../components/OnlyTvSeriesItem";
 import { useOutletContext } from "react-router-dom";
-import OnlyTvSeriesItem from "../components/OnlyTvSeriesItem";
 
-export default function Movies() {
+export function TvSeries() {
   const { movies, searchTitle } = useOutletContext();
   const onlyTvSeries = movies.filter((item) => item.category === "TV Series");
 

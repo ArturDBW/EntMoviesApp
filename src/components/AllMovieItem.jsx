@@ -3,7 +3,6 @@ import { useOutletContext } from "react-router-dom";
 
 export function AllMovieItem({ item }) {
   const { title, thumbnail, year, category, rating, isBookmarked, id } = item;
-
   const isMovie = category === "Movie";
 
   const { setMovies } = useOutletContext();

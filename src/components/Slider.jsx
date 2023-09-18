@@ -1,6 +1,6 @@
 import testImage from "../../public/small.jpg";
 
-export default function Slider() {
+export function Slider() {
   return (
     <>
       <h2 className="sliderContainer__h2">Trending</h2>

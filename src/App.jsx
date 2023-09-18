@@ -1,10 +1,10 @@
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import { AppLayout } from "./ui/AppLayout";
 import { Home } from "./pages/Home";
-import Movies from "./pages/Movies";
-import TvSeries from "./pages/TvSeries";
-import Bookmarked from "./pages/Bookmarked";
-import Error from "./ui/Error";
+import { Movies } from "./pages/Movies";
+import { TvSeries } from "./pages/TvSeries";
+import { Bookmarked } from "./pages/Bookmarked";
+import { Error } from "./ui/Error";
 import json from "./data.json";
 import { AllMovieItem } from "./components/AllMovieItem";
 

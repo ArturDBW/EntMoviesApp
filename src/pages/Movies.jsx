@@ -1,6 +1,6 @@
-import OnlyMoviesItem from "../components/OnlyMoviesItem";
+import { OnlyMoviesItem } from "../components/OnlyMoviesItem";
 import { useOutletContext } from "react-router-dom";
-export default function Movies() {
+export function Movies() {
   const { movies, searchTitle } = useOutletContext();
 
   const onlyMovies = movies.filter((item) => item.category === "Movie");

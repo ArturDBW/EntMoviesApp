@@ -1,7 +1,7 @@
 import { AllMovieItem } from "../components/AllMovieItem";
 import { useOutletContext } from "react-router-dom";
 
-export default function Bookmarked() {
+export function Bookmarked() {
   const { movies } = useOutletContext();
 
   const onlyBookmarkedMovies = movies.filter(

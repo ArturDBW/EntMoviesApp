@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 
-export default function Header({ searchTitle, setSearchTitle }) {
+export function Header({ searchTitle, setSearchTitle }) {
   return (
     <div className="header">
       <div className="header__box">
