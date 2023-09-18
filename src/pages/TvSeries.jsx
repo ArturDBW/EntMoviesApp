@@ -11,7 +11,7 @@ export function TvSeries() {
 
   return (
     <>
-      <h2 className="listContainer__h2">Recommended for you</h2>
+      <h2 className="listContainer__h2">TV Series Recommended for you</h2>
       <div className="listContainer">
         {filteredMovies.map((item, index) => (
           <OnlyTvSeriesItem item={item} key={index} />
