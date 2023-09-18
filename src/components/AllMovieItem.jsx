@@ -1,11 +1,12 @@
 import PropTypes from "prop-types";
 import { useOutletContext } from "react-router-dom";
 
-export function MovieItem({ item }) {
+export function AllMovieItem({ item }) {
   const { title, thumbnail, year, category, rating, isBookmarked, id } = item;
-  const { setMovies } = useOutletContext();
 
   const isMovie = category === "Movie";
+
+  const { setMovies } = useOutletContext();
 
   const handleAddMovieToBookmarkedList = () =>
     setMovies((prevMovies) =>
@@ -67,7 +68,7 @@ export function MovieItem({ item }) {
   );
 }
 
-MovieItem.propTypes = {
+AllMovieItem.propTypes = {
   item: PropTypes.shape({
     id: PropTypes.number,
     title: PropTypes.string,

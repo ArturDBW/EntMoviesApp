@@ -1,4 +1,4 @@
-import { MovieItem } from "../components/MovieItem";
+import { AllMovieItem } from "../components/AllMovieItem";
 import { useOutletContext } from "react-router-dom";
 
 export default function Bookmarked() {
@@ -15,13 +15,13 @@ export default function Bookmarked() {
       <h2 className="listContainer__h2">Bookmarked Movies</h2>
       <div className="listContainer">
         {onlyBookmarkedMovies.map((movieItem, index) => (
-          <MovieItem item={movieItem} key={index} />
+          <AllMovieItem item={movieItem} key={index} />
         ))}
       </div>
       <h2 className="listContainer__h2 mt">Bookmarked TV Series</h2>
       <div className="listContainer">
         {onlyBookmarkedTvSeries.map((tvSeriesItem, index) => (
-          <MovieItem item={tvSeriesItem} key={index} />
+          <AllMovieItem item={tvSeriesItem} key={index} />
         ))}
       </div>
     </>

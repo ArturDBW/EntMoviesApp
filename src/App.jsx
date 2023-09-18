@@ -6,7 +6,7 @@ import TvSeries from "./pages/TvSeries";
 import Bookmarked from "./pages/Bookmarked";
 import Error from "./ui/Error";
 import json from "./data.json";
-import { MovieItem } from "./components/MovieItem";
+import { AllMovieItem } from "./components/AllMovieItem";
 
 const router = createBrowserRouter([
   {
@@ -26,7 +26,7 @@ const router = createBrowserRouter([
           },
           {
             path: ":id",
-            element: <MovieItem item={json[0]} />,
+            element: <AllMovieItem item={json[0]} />,
           },
         ],
       },

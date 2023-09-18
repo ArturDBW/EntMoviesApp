@@ -1,5 +1,5 @@
 import { useOutletContext } from "react-router-dom";
-import { MovieItem } from "./MovieItem";
+import { AllMovieItem } from "./AllMovieItem";
 
 export function MovieList() {
   const { movies, searchTitle } = useOutletContext();
@@ -13,7 +13,7 @@ export function MovieList() {
       <h2 className="listContainer__h2">Recommended for you</h2>
       <div className="listContainer">
         {filteredMovies.map((item) => (
-          <MovieItem item={item} key={item.id} />
+          <AllMovieItem item={item} key={item.id} />
         ))}
       </div>
     </>
