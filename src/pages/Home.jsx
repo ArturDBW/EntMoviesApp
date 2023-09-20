@@ -1,10 +1,10 @@
-import { Slider } from "../components/Slider";
 import { MovieList } from "../components/MovieList";
+import SimpleSlider from "../components/SimpleSlider";
 
 export function Home() {
   return (
     <>
-      <Slider />
+      <SimpleSlider />
       <MovieList />
     </>
   );

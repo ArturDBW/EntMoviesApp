@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import avatar from "../assets/image-avatar.png";
 
 export function Navigation() {
   const [activeIcon, setActiveIcon] = useState(1);
@@ -59,11 +60,7 @@ export function Navigation() {
         </div>
       </div>
       <div>
-        <img
-          className="nav__photo"
-          src="public/assets/image-avatar.png"
-          alt="avatar"
-        />
+        <img className="nav__photo" src={avatar} alt="avatar" />
       </div>
     </nav>
   );
