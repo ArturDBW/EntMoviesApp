@@ -26,9 +26,9 @@ export function Bookmarked() {
         ))}
       </div>
       {BookmarkedTvSeriesLengthZero ? (
-        <h2 className="listContainer__h2">Bookmarked TV Series</h2>
+        <h2 className="listContainer__h2 mt">Bookmarked TV Series</h2>
       ) : (
-        <h2 className="listContainer__h2">Add some favourite TV Series</h2>
+        <h2 className="listContainer__h2 mt">Add some favourite TV Series</h2>
       )}
       <div className="listContainer">
         {onlyBookmarkedTvSeries.map((tvSeriesItem, index) => (

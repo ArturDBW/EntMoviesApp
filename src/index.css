@@ -29,6 +29,10 @@ body {
   gap: 0rem 3rem;
   padding: 2rem;
   color: var(--white); }
+  @media only screen and (max-width: 100rem) {
+    .container {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto; } }
 
 .nav {
   background-color: var(--semiDarkBlue);
@@ -42,18 +46,47 @@ body {
   border-radius: 1rem;
   height: calc(100vh - 4rem);
   width: max-content; }
+  @media only screen and (max-width: 100rem) {
+    .nav {
+      grid-row: 1/2;
+      grid-column: 1/3;
+      height: 9rem;
+      width: 100%;
+      flex-direction: row;
+      padding: 0 4rem; } }
+  .nav__responsive {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between; }
+    @media only screen and (max-width: 100rem) {
+      .nav__responsive {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%; } }
+  @media only screen and (max-width: 500px) {
+    .nav__self {
+      display: none; } }
   .nav__logo {
     display: flex;
     justify-content: center;
     margin-top: 1.6rem; }
+    @media only screen and (max-width: 100rem) {
+      .nav__logo {
+        margin-top: 0; } }
   .nav__icons {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 3rem;
-    margin-top: 5rem;
+    margin-top: -40rem;
     transition: 0.2s all;
     cursor: pointer; }
+    @media only screen and (max-width: 100rem) {
+      .nav__icons {
+        margin-top: 0;
+        flex-direction: row; } }
     .nav__icons--svg:hover {
       fill: var(--red);
       transition: 0.2s all; }
@@ -67,6 +100,10 @@ body {
   grid-row: 1/2;
   padding: 2rem 0;
   display: flex; }
+  @media only screen and (max-width: 100rem) {
+    .header {
+      grid-column: 1/-1;
+      grid-row: 2/3; } }
   .header__box {
     display: flex;
     justify-content: center;
@@ -88,11 +125,18 @@ body {
 .main {
   grid-column: 2/3;
   grid-row: 2/3; }
+  @media only screen and (max-width: 100rem) {
+    .main {
+      grid-column: 1/-1;
+      grid-row: 3/4; } }
 
 .sliderContainer__h2 {
   font-size: 3.6rem;
   font-weight: 300;
   margin-bottom: 2rem; }
+  @media only screen and (max-width: 76.8rem) {
+    .sliderContainer__h2 {
+      font-size: 2.8rem; } }
 
 .movies__h2 {
   font-size: 3.6rem;
@@ -104,10 +148,16 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
   grid-template-rows: auto;
   gap: 4rem; }
+  @media only screen and (max-width: 76.8rem) {
+    .listContainer {
+      grid-template-columns: 1fr 1fr; } }
   .listContainer__h2 {
     font-size: 3.6rem;
     font-weight: 300;
     margin-bottom: 2rem; }
+    @media only screen and (max-width: 76.8rem) {
+      .listContainer__h2 {
+        font-size: 2.8rem; } }
   .listContainer__item {
     position: relative; }
     .listContainer__item--img {
@@ -122,15 +172,30 @@ body {
       color: var(--grey);
       font-size: 1.4rem;
       margin-top: 0.5rem; }
+      @media only screen and (max-width: 50rem) {
+        .listContainer__item--p {
+          font-size: 1.2rem; } }
     .listContainer__item--year {
       margin-right: 3rem; }
+      @media only screen and (max-width: 50rem) {
+        .listContainer__item--year {
+          margin-right: 2rem; } }
     .listContainer__item--category {
       margin-left: 1rem; }
+      @media only screen and (max-width: 50rem) {
+        .listContainer__item--category {
+          margin-left: 0.7rem; } }
     .listContainer__item--rating {
       margin-left: 3rem; }
+      @media only screen and (max-width: 50rem) {
+        .listContainer__item--rating {
+          margin-left: 2rem; } }
     .listContainer__item--title {
       font-size: 2.2rem;
       margin-top: 0.5rem; }
+      @media only screen and (max-width: 50rem) {
+        .listContainer__item--title {
+          font-size: 1.8rem; } }
     .listContainer__item--btnBookmarked {
       position: absolute;
       content: "";
@@ -146,9 +211,6 @@ body {
         background-color: rgba(0, 0, 0, 0.7);
         transition: 0.2s all;
         cursor: pointer; }
-
-.mt {
-  margin-top: 5rem; }
 
 .error {
   height: 100vh;
@@ -181,3 +243,6 @@ body {
     width: 100%;
     border-radius: 2.5rem;
     border: 1rem solid var(--darkBlue); }
+
+.mt {
+  margin-top: 5rem; }

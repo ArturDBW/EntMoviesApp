@@ -11,7 +11,7 @@ export function Navigation() {
 
   return (
     <nav className="nav">
-      <div>
+      <div className="nav__responsive">
         <div className="nav__logo">
           <svg width="33" height="27" xmlns="http://www.w3.org/2000/svg">
             <path
@@ -58,9 +58,9 @@ export function Navigation() {
             </svg>
           </Link>
         </div>
-      </div>
-      <div>
-        <img className="nav__photo" src={avatar} alt="avatar" />
+        <div className="nav__self">
+          <img className="nav__photo" src={avatar} alt="avatar" />
+        </div>
       </div>
     </nav>
   );
