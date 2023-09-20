@@ -239,10 +239,51 @@ body {
 .containerCarousele {
   margin: 0 auto;
   width: 88vw; }
-  .containerCarousele__box--img {
-    width: 100%;
-    border-radius: 2.5rem;
-    border: 1rem solid var(--darkBlue); }
+  .containerCarousele__info {
+    position: absolute;
+    bottom: 3rem;
+    left: 3rem;
+    font-size: 1.8rem;
+    color: var(--white); }
+    @media only screen and (max-width: 1200px) {
+      .containerCarousele__info {
+        font-size: 1.6rem;
+        bottom: 2rem; } }
+    @media only screen and (max-width: 1000px) {
+      .containerCarousele__info {
+        font-size: 1.4rem;
+        bottom: 2rem; } }
+    @media only screen and (max-width: 800px) {
+      .containerCarousele__info {
+        font-size: 1.2rem;
+        bottom: 2rem; } }
+    .containerCarousele__info--year {
+      margin-right: 2rem; }
+    .containerCarousele__info--category {
+      margin-right: 2rem;
+      margin-left: 1rem; }
+    .containerCarousele__info--title {
+      margin-top: 0.7rem;
+      font-size: 2.8rem; }
+      @media only screen and (max-width: 1000px) {
+        .containerCarousele__info--title {
+          font-size: 2.6rem;
+          margin-top: 0.4rem; } }
+      @media only screen and (max-width: 800px) {
+        .containerCarousele__info--title {
+          font-size: 2.4rem; } }
+      @media only screen and (max-width: 500px) {
+        .containerCarousele__info--title {
+          font-size: 2rem; } }
+      @media only screen and (max-width: 400px) {
+        .containerCarousele__info--title {
+          font-size: 1.6rem; } }
+  .containerCarousele__box {
+    position: relative; }
+    .containerCarousele__box--img {
+      width: 100%;
+      border-radius: 2.5rem;
+      border: 1rem solid var(--darkBlue); }
 
 .mt {
   margin-top: 5rem; }
