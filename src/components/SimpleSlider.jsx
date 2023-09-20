@@ -1,17 +1,17 @@
 import { Component } from "react";
 import Slider from "react-slick";
-import image1 from "../assets/image1.jpg";
-import image2 from "../assets/image2.jpg";
-import image3 from "../assets/image3.jpg";
-import image4 from "../assets/image4.jpg";
-import image5 from "../assets/image5.jpg";
+import movie1 from "../assets/movie1.jpg";
+import movie2 from "../assets/movie2.jpg";
+import movie3 from "../assets/movie3.jpg";
+import movie4 from "../assets/movie4.jpg";
+import movie5 from "../assets/movie5.jpg";
 
 export default class SimpleSlider extends Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      slidesToShow: 2.5, // Początkowa wartość slidesToShow
+      slidesToShow: 2.5,
     };
 
     this.handleResize = this.handleResize.bind(this);
@@ -55,7 +55,7 @@ export default class SimpleSlider extends Component {
         <div className="containerCarousele">
           <Slider {...settings}>
             <div className="containerCarousele__box">
-              <img className="containerCarousele__box--img" src={image1} />
+              <img className="containerCarousele__box--img" src={movie1} />
               <div className="containerCarousele__info">
                 <span className="containerCarousele__info--year">2021</span>
                 <span>
@@ -79,7 +79,7 @@ export default class SimpleSlider extends Component {
               </div>
             </div>
             <div className="containerCarousele__box">
-              <img className="containerCarousele__box--img" src={image2} />
+              <img className="containerCarousele__box--img" src={movie2} />
               <div className="containerCarousele__info">
                 <span className="containerCarousele__info--year">2019</span>
                 <span>
@@ -103,7 +103,7 @@ export default class SimpleSlider extends Component {
               </div>
             </div>
             <div className="containerCarousele__box">
-              <img className="containerCarousele__box--img" src={image3} />
+              <img className="containerCarousele__box--img" src={movie3} />
               <div className="containerCarousele__info">
                 <span className="containerCarousele__info--year">2021</span>
                 <span>
@@ -127,7 +127,7 @@ export default class SimpleSlider extends Component {
               </div>
             </div>
             <div className="containerCarousele__box">
-              <img className="containerCarousele__box--img" src={image4} />
+              <img className="containerCarousele__box--img" src={movie4} />
               <div className="containerCarousele__info">
                 <span className="containerCarousele__info--year">2018</span>
                 <span>
@@ -153,7 +153,7 @@ export default class SimpleSlider extends Component {
               </div>
             </div>
             <div className="containerCarousele__box">
-              <img className="containerCarousele__box--img" src={image5} />
+              <img className="containerCarousele__box--img" src={movie5} />
               <div className="containerCarousele__info">
                 <span className="containerCarousele__info--year">2019</span>
                 <span>
