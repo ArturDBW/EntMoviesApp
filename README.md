@@ -2,7 +2,7 @@
 
 ## Description
 
-Web application with movies and TV series.
+Web application with movies and TV series
 
 ## Technologies
 - React
